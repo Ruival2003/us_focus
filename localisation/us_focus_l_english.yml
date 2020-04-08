@@ -7,8 +7,15 @@
   USA_communist_start:0 "Unionization"
   USA_communist_start_desc:0 "With a crippling economy the people begin to unionize and ideals of a communist America begin to spread."
   #4
-  democratic_start:0 "American Liberty"
-  democratic_start_desc:0 "Although times may not be great, people around the United States unite around the ideals that make their nation great: Liberty and Freedom."
-  #5
-  USA_fascist_slowdown:0 "Finding the Middle Ground"
-  USA_fascist_slowdown_desc:0 "The uprise of patriotists means that implementing new government policies is becoming a struggle. The government must negotiate with the nationalists on a policy that suits both parties' interests and helps the country get out of the depression."
+  USA_democratic_start:0 "American Liberty"
+  USA_democratic_start_desc:0 "Although times may not be great, people around the United States unite around the ideals that make their nation great: Liberty and Freedom."
+   #5
+   USA_fascist_slowdown:0 "Finding the Middle Ground"
+   USA_fascist_slowdown_desc:0 "The uprise of patriotists means that implementing new government policies is becoming a struggle. The government must negotiate with the nationalists on a policy that suits both parties' interests and helps the country get out of the depression."
+    #6
+    USA_communist_slowdown:0 "Expanding the New Deal"
+    USA_communist_slowdown_desc:0 "Blah blah blah"
+     #7
+     USA_WPA:0 "WPA"
+     USA_WPA_desc:0 "Millions of people are still suffering the unemployment resulting from the Great Depression. An agency to put these people to work on public projects may not fully solve the problem, but the Work Progress Administration is a step in the right direction."
+     

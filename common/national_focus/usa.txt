@@ -12,7 +12,7 @@ focus_tree = {
 	
 	default = no
 	
-	continuous_focus_position = { x = 50 y = 500 }
+	continuous_focus_position = { x = 50 y = 5000 }
 	
 	############################################################
 	#1 NEW DEAL # POLITICAL TREE START #
@@ -52,7 +52,7 @@ focus_tree = {
 		prerequisite = { focus = USA_continue_the_new_deal }
 		relative_position_id = USA_continue_the_new_deal
 		cost = 10
-		mutually_exclusive = { focus = democratic_start focus = USA_communist_start }
+		mutually_exclusive = { focus = USA_democratic_start focus = USA_communist_start }
 		
 		ai_will_do = {
 			factor = 1
@@ -89,7 +89,7 @@ focus_tree = {
 		prerequisite = { focus = USA_continue_the_new_deal }
 		relative_position_id = USA_continue_the_new_deal
 		cost = 10
-		mutually_exclusive = { focus = USA_fascist_start focus = democratic_start }
+		mutually_exclusive = { focus = USA_fascist_start focus = USA_democratic_start }
 		
 		ai_will_do = {
 			factor = 1
@@ -117,7 +117,7 @@ focus_tree = {
 	}
 	#4 DEMOCRACY START - AMERICAN LIBERTY
 	focus = {
-		id = democratic_start
+		id = USA_democratic_start
 		icon = GFX_goal_support_democracy
 		x = 0
 		y = 1
@@ -153,12 +153,12 @@ focus_tree = {
 	#5 FASCIST NERF
 	focus = {
 		id = USA_fascist_slowdown
-		icon = GFX_goal_support_democracy
+		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 1
 		prerequisite = { focus = USA_fascist_start }
 		relative_position_id = USA_fascist_start
-		cost = 10
+		cost = 25
 		
 		ai_will_do = {
 			factor = 1
@@ -182,12 +182,12 @@ focus_tree = {
 	#6 COMMUNIST NERF
 	focus = {
 		id = USA_communist_slowdown
-		icon = GFX_goal_support_democracy
+		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 1
 		prerequisite = { focus = USA_communist_start }
 		relative_position_id = USA_communist_start
-		cost = 10
+		cost = 25
 		
 		ai_will_do = {
 			factor = 1
@@ -206,6 +206,36 @@ focus_tree = {
 		
 		completion_reward = {
 			add_political_power = 100
+		}
+	}
+	#7 WPA
+	focus = {
+		id = USA_wpa
+		icon = GFX_goal_generic_production
+		relative_position_id = USA_democratic_start
+		x = 0
+		y = 2
+		prerequisite = ( focus = USA_democratic_start )
+		#prerequisite = ( focus = USA_democratic_start focus = USA_communist_slowdown focus = USA_fascist_slowdown )
+		cost = 1
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_political_power = 150
 		}
 	}
 }
