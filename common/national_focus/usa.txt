@@ -70,6 +70,8 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+		    show_ideas_tooltip = charles_coughlin
 			add_timed_idea = {
 				idea = nationalism
 				days = 720
@@ -104,6 +106,8 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		completion_reward = {
+		custom_effect_tooltip = available_political_advisor
+		    show_ideas_tooltip = earl_browder
 			add_timed_idea = {
 				idea = internationalism
 				days = 720
