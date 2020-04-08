@@ -148,7 +148,37 @@ focus_tree = {
 	}
 	#5 FASCIST NERF
 	focus = {
-		id = fascist_slowdown
+		id = USA_fascist_slowdown
+		icon = GFX_goal_support_democracy
+		x = 0
+		y = 1
+		prerequisite = { focus = USA_fascist_start }
+		relative_position_id = USA_fascist_start
+		cost = 10
+		mutually_exclusive = { focus = USA_fascist_start focus = USA_communist_start }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	#6 COMMUNIST NERF
+	focus = {
+		id = USA_communist_slowdown
 		icon = GFX_goal_support_democracy
 		x = 0
 		y = 1
