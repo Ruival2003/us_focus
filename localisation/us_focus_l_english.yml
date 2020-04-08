@@ -1,21 +1,36 @@
 ﻿l_english:
 #2
- USA_fascist_start:0 "America First"
- USA_fascist_start_desc:0 "As the world around brews war, a sense of patriotism and nationalism rises in America, putting the nation above all else in the eyes of its people."
- 
- #3
-  USA_communist_start:0 "Unionization"
-  USA_communist_start_desc:0 "With a crippling economy the people begin to unionize and ideals of a communist America begin to spread."
-  #4
-  USA_democratic_start:0 "American Liberty"
-  USA_democratic_start_desc:0 "Although times may not be great, people around the United States unite around the ideals that make their nation great: Liberty and Freedom."
-   #5
-   USA_fascist_slowdown:0 "Finding the Middle Ground"
-   USA_fascist_slowdown_desc:0 "The uprise of patriotists means that implementing new government policies is becoming a struggle. The government must negotiate with the nationalists on a policy that suits both parties' interests and helps the country get out of the depression."
-    #6
-    USA_communist_slowdown:0 "Expanding the New Deal"
-    USA_communist_slowdown_desc:0 "Blah blah blah"
-     #7
-     USA_wpa:0 "WPA"
-     USA_wpa_desc:0 "Millions of people are still suffering the unemployment resulting from the Great Depression. An agency to put these people to work on public projects may not fully solve the problem, but the Work Progress Administration is a step in the right direction."
-     
+USA_fascist_start:0 "America First"
+USA_fascist_start_desc:0 "As the world around brews war, a sense of patriotism and nationalism rises in America, putting the nation above all else in the eyes of its people." 
+#3
+USA_communist_start:0 "Unionization"
+USA_communist_start_desc:0 "With a crippling economy the people begin to unionize and ideals of a communist America begin to spread."
+#4
+USA_democratic_start:0 "American Liberty"
+USA_democratic_start_desc:0 "Although times may not be great, people around the United States unite around the ideals that make their nation great: Liberty and Freedom."
+#5
+USA_fascist_slowdown:0 "Finding the Middle Ground"
+USA_fascist_slowdown_desc:0 "The uprise of patriotists means that implementing new government policies is becoming a struggle. The government must negotiate with the nationalists on a policy that suits both parties' interests and helps the country get out of the depression."
+#6
+USA_communist_slowdown:0 "Expanding the New Deal"
+USA_communist_slowdown_desc:0 "The rise of Communism in the government has slowed down America's recovery from the depression. America has now taken a step back to review the New Deal, planning on expanding the social services it provides to please the proletariat."
+#7
+USA_wpa:0 "WPA"
+USA_wpa_desc:0 "Millions of people are still suffering the unemployment resulting from the Great Depression. An agency to put these people to work on public projects may not fully solve the problem, but the Work Progress Administration is a step in the right direction."
+#8
+USA_agricultural_adjustment_act:0 "Agricultural Adjustment Act"
+USA_agricultural_adjustment_act_desc:0 "Our farmers have been particularly hard-hit by the depression. We must ensure that the people who produce our food are not driven out of business by an unchecked market."
+#9
+USA_fair_labor_standards_act:0 "Fair Labor Standards Act"
+USA_fair_labor_standards_act_desc:0 "With the first signs of a slow recovery taking place, it is time to ensure that the workers get to participate in it. We must ban exploitative practices such as unpaid overtime and introduce a liveable minimum wage."
+#10
+USA_federal_housing_act:0 "Federal Housing Act"
+USA_federal_housing_act_desc:0 "As part of our ongoing efforts to eradicate poverty in the United States, we will create a program of federally-subsidized housing."
+#11
+USA_fascist_party_raids:0 "Radical Nationalism"
+USA_fascist_party_raids_desc:0 "From growing patriotism emerge radical nationalists among the American population. The radicals are creating violent protests and encouraging terrorism, hindering the support of other ideologies and the stability of the country."
+#12
+USA_fascist_ban_parties:0 "Emergency Executive Powers"
+USA_fascist_ban_parties_desc:0 "Desperate times call for desperate measures. Congress has decided to, in order to ensure quick government action, give the sitting President never before seen control over the federal government."
+#13
+USA_radical_nationalism:0 "Radical Nationalism"

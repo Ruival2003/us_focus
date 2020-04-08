@@ -35,7 +35,7 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
+		cancel_if_invalid = no
 		continue_if_invalid = no
 		available_if_capitulated = no
 
@@ -65,7 +65,7 @@ focus_tree = {
 			
 		}
 		
-		cancel_if_invalid = yes
+		cancel_if_invalid = no
 		continue_if_invalid = no
 		available_if_capitulated = no
 		
@@ -101,7 +101,7 @@ focus_tree = {
 		bypass = {
 		}
 		
-		cancel_if_invalid = yes
+		cancel_if_invalid = no
 		continue_if_invalid = no
 		available_if_capitulated = no
 		
@@ -137,12 +137,12 @@ focus_tree = {
 			
 		}
 		
-		cancel_if_invalid = yes
+		cancel_if_invalid = no
 		continue_if_invalid = no
 		available_if_capitulated = no
 		
 		completion_reward = {
-			add_stability = 1
+			set_stability = 1
 			add_popularity = {
 				ideology = democratic
 				popularity = 1
@@ -171,7 +171,7 @@ focus_tree = {
 			
 		}
 		
-		cancel_if_invalid = yes
+		cancel_if_invalid = no
 		continue_if_invalid = no
 		available_if_capitulated = no
 		
@@ -182,7 +182,7 @@ focus_tree = {
 	#6 COMMUNIST NERF
 	focus = {
 		id = USA_communist_slowdown
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_focus_generic_concessions
 		x = 0
 		y = 1
 		prerequisite = { focus = USA_communist_start }
@@ -200,7 +200,7 @@ focus_tree = {
 			
 		}
 		
-		cancel_if_invalid = yes
+		cancel_if_invalid = no
 		continue_if_invalid = no
 		available_if_capitulated = no
 		
@@ -208,7 +208,7 @@ focus_tree = {
 			add_political_power = 100
 		}
 	}
-	#7 WPA
+	#7 1ST STEP AWAY FROM GREAT DEPRESSION
 	focus = {
 		id = USA_wpa
 		icon = GFX_goal_generic_production
@@ -229,7 +229,7 @@ focus_tree = {
 			
 		}
 		
-		cancel_if_invalid = yes
+		cancel_if_invalid = no
 		continue_if_invalid = no
 		available_if_capitulated = no
 		
@@ -237,4 +237,261 @@ focus_tree = {
 			add_political_power = 150
 		}
 	}
+	#8 2ST STEP AWAY FROM GREAT DEPRESSION
+	focus = {
+		id = USA_agricultural_adjustment_act
+		icon = GFX_goal_generic_consumer_goods
+		x = 0
+		y = 1
+		prerequisite = { focus = USA_wpa }
+		relative_position_id = USA_wpa
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			congress_medium_support_trigger = yes
+		}
+		
+		bypass = {
+			not = {
+				OR = {
+					has_idea = great_depression
+					has_idea = great_depression_2
+					has_idea = great_depression_3
+				}
+			}
+		}
+		
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			USA_great_depression_level_down = yes
+			set_country_flag = { flag = USA_great_depression_cooldown value = 1 days = 230 }
+			USA_congress_medium_opposition = yes
+			custom_effect_tooltip = USA_great_depression_cooldown_tt
+			unlock_decision_tooltip = { decision = USA_pay_farm_subsidies show_effect_tooltip = yes }
+		}
+	}
+	#9 3RD STEP AWAY FROM GREAT DEPRESSION
+	focus = {
+		id = USA_fair_labor_standards_act
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		x = 0
+		y = 1
+		prerequisite = { focus = USA_agricultural_adjustment_act }
+		relative_position_id = USA_agricultural_adjustment_act
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			congress_medium_support_trigger = yes
+			not = { has_country_flag = USA_great_depression_cooldown }
+		}
+		
+		bypass = {
+			not = {
+				OR = {
+					has_idea = great_depression
+					has_idea = great_depression_2
+					has_idea = great_depression_3
+				}
+			}
+		}
+		
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			USA_great_depression_level_down = yes
+			set_country_flag = { flag = USA_great_depression_cooldown value = 1 days = 130 }
+			USA_congress_medium_opposition = yes
+			custom_effect_tooltip = USA_great_depression_cooldown_tt
+		}
+	}
+	#10 Remove Great DEPRESSION
+	focus = {
+		id = USA_federal_housing_act
+		icon = GFX_goal_generic_construct_civilian
+		x = 0
+		y = 1
+		prerequisite {focus = USA_fair_labor_standards_act}
+		relative_position_id = USA_fair_labor_standards_act
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			congress_medium_support_trigger = yes
+			not = { has_country_flag = USA_great_depression_cooldown }
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+		complete_tooltip = {
+			every_owned_state = {
+				limit = {
+					has_state_flag = USA_federal_housing_act
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		completion_reward = {
+			USA_great_depression_level_down = yes
+			USA_congress_medium_opposition = yes
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				set_state_flag = USA_federal_housing_act
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					is_core_of = ROOT
+					not = { has_state_flag = USA_federal_housing_act }
+				}
+				add_extra_state_shared_building_slots = 1
+				set_state_flag = USA_federal_housing_act
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					is_core_of = ROOT
+					not = { has_state_flag = USA_federal_housing_act }
+				}
+				add_extra_state_shared_building_slots = 1
+				set_state_flag = USA_federal_housing_act
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					is_core_of = ROOT
+					not = { has_state_flag = USA_federal_housing_act }
+				}
+				add_extra_state_shared_building_slots = 1
+				set_state_flag = USA_federal_housing_act
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					is_core_of = ROOT
+					not = { has_state_flag = USA_federal_housing_act }
+				}
+				add_extra_state_shared_building_slots = 1
+				set_state_flag = USA_federal_housing_act
+			}
+		}
+	}
+	#11 RADICAL NATIONALISM
+	focus = {
+		id = USA_fascist_party_raids
+		icon = GFX_goal_generic_political_pressure
+		x = 2
+		y = 1
+		relative_position_id = USA_fascist_start
+		prerequisite = { focus = USA_fascist_start }
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			fascism > 0.2
+			has_political_power > 300
+		}
+		
+		bypass{
+		}
+		
+		completion_reward = {
+			add_political_power = -300
+			add_popularity {
+				ideology = fascism
+				popularity = 0.1
+			}
+			add_timed_idea {
+				idea = USA_radical_nationalism
+				time = 365 days
+				add_stability = -0.1
+			}
+		}
+	}
+	#12 EMERGENCY EXECUTIVE POWERS
+	focus = {
+		id = USA_fascist_ban_parties
+		icon = GFX_goal_generic_forceful_treaty
+		x = 0
+		y = 1
+		relative_position_id = USA_fascist_party_raids
+		prerequisite = { focus = USA_fascist_party_raids }
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			fascism > 0.50
+			congress_high_support_trigger = yes
+		}
+		
+		bypass{
+		}
+		
+		completion_reward = {
+			add_political_power = 150
+			add_popularity {
+				ideology = fascism
+				popularity = 0.1
+			}
+			add_popularity {
+				ideology = democratic
+				popularity = -0.2
+			}
+			add_popularity {
+				ideology = communism
+				popularity = -0.2
+			}
+		}
+	}
+	#13 SINGLE PARTY STATE
+	
 }
