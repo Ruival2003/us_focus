@@ -1,0 +1,146 @@
+focus_tree = {
+	id = usa_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = USA
+		}
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 500 }
+	
+	############################################################
+	#1 NEW DEAL # POLITICAL TREE START #
+	focus = {
+		id = USA_continue_the_new_deal
+		icon = GFX_focus_generic_self_management
+		x = 3
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	#2 FASCIST START
+	focus = {
+		id = USA_fascist_start
+		icon = GFX_goal_support_fascism
+		x = 2
+		y = 1
+		prerequisite = { focus = USA_continue_the_new_deal }
+		relative_position_id = USA_continue_the_new_deal
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_timed_idea = {
+				idea = nationalism
+				days = 720
+			}
+		    add_popularity = { ideology = fascism popularity = 0.05 }
+		}
+	}
+	
+	#3 COMMUNIST START
+	focus = {
+		id = USA_communist_start
+		icon = GFX_goal_support_communism
+		x = -2
+		y = 1
+		prerequisite = { focus = USA_continue_the_new_deal }
+		relative_position_id = USA_continue_the_new_deal
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+		}
+		
+		bypass = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_timed_idea = {
+				idea = internationalism
+				days = 720
+			}
+			add_popularity = { ideology = communism popularity = 0.05 }
+		}
+	}
+	#4 DEMOCRACY START
+	focus = {
+		id = democratic_start
+		icon = GFX_goal_support_democracy
+		x = 0
+		y = 1
+		prerequisite = { focus = USA_continue_the_new_deal }
+		relative_position_id = USA_continue_the_new_deal
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+		}
+		
+		bypass = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_stability = 1
+			add_popularity = {
+				ideology = democratic
+				popularity = 1
+			}
+			
+		}
+	}
+}

@@ -1,0 +1,11 @@
+﻿l_english:
+#1
+ USA_fascist_start:0 "America First"
+ USA_fascist_start_desc:0 "As the world around brews war, a sense of patriotism and nationalism rises in America, putting the nation above all else in the eyes of its people."
+ 
+ #2
+  USA_communist_start:0 "Unionization"
+  USA_communist_start_desc:0 "With a crippling economy the people begin to unionize and ideals of a communist America begin to spread."
+  #3
+  democratic_start:0 "American Liberty"
+  democratic_start_desc:0 "Although times may not be great, people around the United States unite around the ideals that make their nation great: Liberty and Freedom."
