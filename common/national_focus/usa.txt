@@ -52,7 +52,7 @@ focus_tree = {
 		prerequisite = { focus = USA_continue_the_new_deal }
 		relative_position_id = USA_continue_the_new_deal
 		cost = 10
-		mutually_exclusive = { focus = USA_democratic_start focus = USA_communist_start }
+		mutually_exclusive = { focus = democratic_start focus = USA_communist_start }
 		
 		ai_will_do = {
 			factor = 1
