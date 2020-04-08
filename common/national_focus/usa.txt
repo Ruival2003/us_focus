@@ -212,12 +212,11 @@ focus_tree = {
 	focus = {
 		id = USA_wpa
 		icon = GFX_goal_generic_production
-		relative_position_id = USA_democratic_start
 		x = 0
 		y = 2
-		prerequisite = ( focus = USA_democratic_start )
-		#prerequisite = ( focus = USA_democratic_start focus = USA_communist_slowdown focus = USA_fascist_slowdown )
-		cost = 1
+		prerequisite = { focus = USA_democratic_start focus = USA_fascist_slowdown focus = USA_communist_slowdown }
+		relative_position_id = USA_democratic_start
+		cost = 10
 		
 		ai_will_do = {
 			factor = 1
