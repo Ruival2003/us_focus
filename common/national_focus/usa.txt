@@ -159,7 +159,6 @@ focus_tree = {
 		prerequisite = { focus = USA_fascist_start }
 		relative_position_id = USA_fascist_start
 		cost = 10
-		mutually_exclusive = { focus = USA_fascist_start focus = USA_communist_start }
 		
 		ai_will_do = {
 			factor = 1
@@ -186,10 +185,9 @@ focus_tree = {
 		icon = GFX_goal_support_democracy
 		x = 0
 		y = 1
-		prerequisite = { focus = USA_fascist_start }
-		relative_position_id = USA_fascist_start
+		prerequisite = { focus = USA_communist_start }
+		relative_position_id = USA_communist_start
 		cost = 10
-		mutually_exclusive = { focus = USA_fascist_start focus = USA_communist_start }
 		
 		ai_will_do = {
 			factor = 1
