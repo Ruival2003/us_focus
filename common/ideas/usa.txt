@@ -1399,16 +1399,13 @@ ideas = {
 			}
 			available = {
 				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					has_completed_focus = USA_america_first
-					not = { focus_progress = { focus = USA_neutrality_act progress > 0 } }
-					not = { focus_progress = { focus = USA_limited_intervention progress > 0 } }
+					has_completed_focus = USA_fascist_start
+					#not = { focus_progress = { focus = USA_neutrality_act progress > 0 } }
+					#not = { focus_progress = { focus = USA_limited_intervention progress > 0 } }
 				}
 				if = {
 					limit = { has_dlc = "Man the Guns" }	
-					NOT = { has_autonomy_state = autonomy_supervised_state }
+					#NOT = { has_autonomy_state = autonomy_supervised_state }
 				}
 			}
 
